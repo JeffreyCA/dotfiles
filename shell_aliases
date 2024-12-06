@@ -1,0 +1,12 @@
+# Shell aliases
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+alias c="clear"
+alias ff='find . -type f -name'
+
+alias cli="cd cli/azd"
+alias work="cd /workspaces/*"
+
+alias gitmsft="git config --global user.email \"$MSFT_EMAIL\" && git config --global user.name \"$MSFT_NAME\""

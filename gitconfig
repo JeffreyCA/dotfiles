@@ -1,0 +1,26 @@
+[format]
+	pretty = format:* %C(yellow)%h%C(reset) %C(green)(%as)%C(reset) %s %C(dim white)<%ae>%C(reset)%C(auto)%d%C(reset)
+[log]
+	abbrevCommit = true
+	date = iso
+[alias]
+	c = commit -m
+	ca = commit -am
+	cam = commit -am
+	undo = reset --soft HEAD~1
+
+	b = branch
+	f = fetch
+
+	l = log
+
+	r = remote -v
+	s = status -s
+	st = status
+	co = checkout
+	cob = checkout -b
+
+	contributors = shortlog --summary --numbered
+	contrib = shortlog --summary --numbered
+	# Credit an author on the latest commit
+	credit = "!f() { git commit --amend --author \"$1 <$2>\" --reuse-message=HEAD; }; f"
