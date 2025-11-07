@@ -1,2 +1,14 @@
 # Shell exports
 export LANG="en_US"
+
+sudo sh -c 'echo 0 > /proc/sys/kernel/yama/ptrace_scope'
+# sudo sysctl -w dev.tty.legacy_tiocsti=1
+
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# export FZF_DEFAULT_OPTS="-i --bind 'tab:accept'"
+
+# eval "$(zoxide init --cmd cd bash)"
+
+# export PYENV_ROOT="$HOME/.pyenv"
+# [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init - bash)"
