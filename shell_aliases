@@ -1,18 +1,30 @@
+rebase_onto_main() {
+    if [ -z "$1" ]; then
+        echo "Usage: rebase_onto_main <N>"
+        echo "N: Number of commits to rebase from HEAD"
+        return 1
+    fi
+    git rebase HEAD~$1 --onto main
+}
+
 # Shell aliases
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
 alias c="clear"
-alias ff='find . -type f -name'
 
 alias cli="cd cli/azd"
-alias work="cd /workspaces/*"
-alias venv="python -m venv env && source env/bin/activate"
+alias agent="cd azure.ai.agents"
+alias sample="cd /workspaces/agents-sample/src"
+alias work="cd /workspaces && ls"
 alias build="go build -gcflags=\"all=-N -l\" && go install"
 alias soft="git reset HEAD~1 --soft"
-alias main="git fetch origin main:main"
+alias main="git fetch upstream main:main && git push origin main"
+alias main2="git pull upstream main && git push origin main"
 alias venv="python -m venv env && source env/bin/activate"
 alias sauce="source env/bin/activate"
+alias rebase=rebase_onto_main
+alias proto="make proto && ../../eng/scripts/copyright-check.sh . --fix > /dev/null || echo 'Successfully generated proto files!'"
 
 alias gitmsft="git config --global user.email \"$MSFT_EMAIL\" && git config --global user.name \"$MSFT_NAME\""
