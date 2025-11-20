@@ -1,3 +1,7 @@
+mkd() {
+    mkdir -p "$1" && cd "$1"
+}
+
 rebase_onto_main() {
     if [ -z "$1" ]; then
         echo "Usage: rebase_onto_main <N>"
