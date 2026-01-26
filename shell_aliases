@@ -29,6 +29,8 @@ alias ff='find . -type f -name'
 
 alias cli="cd cli/azd"
 alias agent="cd azure.ai.agents"
+alias finetune="cd azure.ai.finetune"
+alias x="cd microsoft.azd.extensions"
 alias sample="cd /workspaces/agents-sample/src"
 alias work="cd /workspaces && ls"
 # alias build="go build -gcflags=\"all=-N -l\" && go install"
