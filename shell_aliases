@@ -1,8 +1,10 @@
 build() {
-    if [[ "$PWD" == */azure-dev/cli/azd ]]; then
+    if [[ "$PWD" == */cli/azd/extensions/* ]]; then
+        azd x build
+    elif [[ "$PWD" == */cli/azd ]]; then
         go build -gcflags="all=-N -l" && go install
     else
-        azd x build
+        go build -gcflags="all=-N -l"
     fi
 }
 
