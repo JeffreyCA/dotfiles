@@ -2,7 +2,7 @@
 sudo sh -c 'echo 0 > /proc/sys/kernel/yama/ptrace_scope'
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-export FZF_DEFAULT_OPTS="-i --bind 'tab:accept'"
+export FZF_DEFAULT_OPTS="-i --bind 'tab:accept' --history-size 2147483647"
 
 eval "$(zoxide init --cmd cd bash)"
 
