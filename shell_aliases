@@ -35,7 +35,6 @@ alias finetune="cd azure.ai.finetune"
 alias x="cd microsoft.azd.extensions"
 alias sample="cd /workspaces/agents-sample/src"
 alias work="cd /workspaces && ls"
-# alias build="go build -gcflags=\"all=-N -l\" && go install"
 alias soft="git reset HEAD~1 --soft"
 alias main="git fetch upstream main:main -u && git push origin main"
 alias main2="git pull upstream main && git push origin main"
@@ -44,4 +43,7 @@ alias sauce="source env/bin/activate"
 alias rebase=rebase_onto_main
 alias proto="make proto && ../../eng/scripts/copyright-check.sh . --fix > /dev/null || echo 'Successfully generated proto files!'"
 
-alias gitmsft="git config --global user.email \"$MSFT_EMAIL\" && git config --global user.name \"$MSFT_NAME\""
+# alias ytv='yt-dlp -t mp4'
+# alias yta='yt-dlp -t mp3 --audio-quality 0'
+
+# alias gitmsft="git config --global user.email \"$MSFT_EMAIL\" && git config --global user.name \"$MSFT_NAME\""
