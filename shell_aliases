@@ -31,6 +31,7 @@ alias ff='find . -type f -name'
 
 alias cli="cd cli/azd"
 alias agent="cd azure.ai.agents"
+alias demo="microsoft.azd.demo"
 alias finetune="cd azure.ai.finetune"
 alias x="cd microsoft.azd.extensions"
 alias sample="cd /workspaces/agents-sample/src"
