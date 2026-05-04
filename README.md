@@ -1,3 +1,9 @@
 # dotfiles
 
-My basic dotfiles configuration for GitHub Codespaces
+My basic dotfiles configuration.
+
+## Configuring commit signing on Windows
+
+```sh
+git config --global gpg.program "C:\Program Files\GnuPG\bin\gpg.exe"
+```
