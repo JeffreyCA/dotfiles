@@ -21,6 +21,10 @@ rebase_onto_main() {
     git rebase HEAD~$1 --onto main
 }
 
+coauthor() {
+    git commit --amend -m "$(git log -1 --format=%s)"$'\n\n'"Co-authored-by: Copilot <copilot@github.com>"
+}
+
 # Shell aliases
 alias ..="cd .."
 alias ...="cd ../.."
@@ -44,7 +48,7 @@ alias sauce="source env/bin/activate"
 alias rebase=rebase_onto_main
 alias proto="make proto && ../../eng/scripts/copyright-check.sh . --fix > /dev/null || echo 'Successfully generated proto files!'"
 
+
+
 # alias ytv='yt-dlp -t mp4'
 # alias yta='yt-dlp -t mp3 --audio-quality 0'
-
-# alias gitmsft="git config --global user.email \"$MSFT_EMAIL\" && git config --global user.name \"$MSFT_NAME\""
